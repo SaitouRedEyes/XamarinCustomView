@@ -13,11 +13,12 @@ namespace CustomView
         Context context;
 
         public static int screenW, screenH;
-        public static bool isDead, isPaused, isUpdating;
+        public static bool isDead, isPaused, isUpdating, isSendingLetter;
 
         private Handler handler;
 
-        private Paint white;
+        private Paint scorePaint;
+        private Paint pausePaint;
 
         private Ball ball;
         private Player player;
@@ -50,11 +51,16 @@ namespace CustomView
             screenW = context.Resources.DisplayMetrics.WidthPixels;
             screenH = context.Resources.DisplayMetrics.HeightPixels;
 
-            isDead = isPaused = false;
+            isDead = isPaused = isSendingLetter = false;
             isUpdating = true;
 
-            white = new Paint();
-            white.SetARGB(255, 255, 255, 255);
+            scorePaint = new Paint();
+            scorePaint.SetARGB(255, 255, 255, 255);
+            scorePaint.TextSize = 25;
+
+            pausePaint = new Paint();
+            pausePaint.TextSize = 70;
+            pausePaint.Color = Color.White;
 
             ball = new Ball();
             player = new Player();
@@ -93,10 +99,10 @@ namespace CustomView
                 foreach(Block b in bm.blocks)
                     b.Draw(canvas);
 
-                canvas.DrawText("High score: " + highScore.ToString(), screenW * 0.65f, screenH * 0.03f, white);
+                canvas.DrawText("High score: " + highScore.ToString(), screenW * 0.7f, screenH * 0.03f, scorePaint);
             }
             else
-                canvas.DrawText("Touch to restart", screenW * 0.2f, screenH * 0.5f, white);
+                canvas.DrawText("Touch to restart", screenW * 0.15f, screenH * 0.4f, pausePaint);
         }
 
         private void Update()
@@ -108,6 +114,9 @@ namespace CustomView
             }
             else if (isDead)
                 GameOver();
+
+            if (isSendingLetter)
+                SendLetterToHangman();
         }
 
         private void GameOver()
@@ -125,6 +134,21 @@ namespace CustomView
             score = new Score();
             bm.SetupBlocks();
             isDead = false;
+        }
+
+        private void SendLetterToHangman()
+        {
+            isSendingLetter = false;
+            Intent i = new Intent("Game");
+            i.AddCategory("Hangman");
+
+            i.AddFlags(ActivityFlags.ReorderToFront);
+
+            Bundle myParameters = new Bundle();
+            myParameters.PutString("Letter", "A");
+
+            i.PutExtras(myParameters);
+            context.StartActivity(i);
         }
 
         public void Run()

@@ -6,6 +6,7 @@ using Android.Widget;
 namespace CustomView
 {
     [Activity(Label = "Game")]
+    [IntentFilter(new[] { "Game"}, Categories = new[] { Intent.CategoryDefault, "Arkanoid"} )]
     public class Game : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -14,9 +15,9 @@ namespace CustomView
 
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
-            SetContentView(new GameView(this));
-
             GetIntentMessage();
+
+            SetContentView(new GameView(this));
         }
 
         private void GetIntentMessage()
@@ -27,7 +28,9 @@ namespace CustomView
             {
                 Bundle myParameters = i.Extras;
 
-                if (myParameters != null) Toast.MakeText(this, myParameters.GetString(Intent.ExtraText), ToastLength.Short).Show();
+                if (myParameters != null) Toast.MakeText(this, 
+                    myParameters.GetString(Intent.ExtraText), 
+                    ToastLength.Short).Show();
             }
         }
 

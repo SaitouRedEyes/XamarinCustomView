@@ -5,7 +5,13 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:label="@string/app_name" android:name="android.app.Application" android:debuggable="true">
-    <activity android:label="Game" android:name="md5c835e7b039829b3fda7267de2899da68.Game" />
+    <activity android:label="Game" android:name="md5c835e7b039829b3fda7267de2899da68.Game">
+      <intent-filter>
+        <action android:name="Game" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="Arkanoid" />
+      </intent-filter>
+    </activity>
     <activity android:label="CustomView" android:name="md5c835e7b039829b3fda7267de2899da68.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

@@ -49,6 +49,7 @@ namespace CustomView
             if(e.Action == MotionEventActions.Up)
             {
                 Intent i = new Intent(context, typeof(Game));
+                //Intent i = new Intent("ArkanoidGame");
 
                 Bundle myParameters = new Bundle();
                 myParameters.PutString(Intent.ExtraText, "Let's Go!!!");

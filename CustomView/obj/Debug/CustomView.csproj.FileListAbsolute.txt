@@ -8,6 +8,9 @@ C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\android\bin\CustomView.CustomView.apk
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\layout\main.xml
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\values\strings.xml
+C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\drawable-hdpi\arkanoid_title_screen.jpg
+C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\drawable-mdpi\arkanoid_title_screen.jpg
+C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\drawable-xhdpi\arkanoid_title_screen.jpg
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\R.cs.flag
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\uploadflags.txt
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\bin\Debug\Mono.Android.pdb
@@ -43,8 +46,5 @@ C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\android\assets\System.Runtime.Serialization.pdb
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\android\assets\System.Xml.pdb
-C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\drawable-hdpi\arkanoid_title_screen.jpg
-C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\drawable-mdpi\arkanoid_title_screen.jpg
-C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\res\drawable-xhdpi\arkanoid_title_screen.jpg
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\bin\Debug\CustomView.dll
 C:\Users\Administrador.000\Desktop\XamarinProjects\XamarinCustomView\CustomView\obj\Debug\linksrc\CustomView.dll.mdb

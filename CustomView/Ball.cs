@@ -1,4 +1,6 @@
-﻿using Android.Graphics;
+﻿using Android.Content;
+using Android.Graphics;
+using Android.OS;
 
 namespace CustomView
 {
@@ -70,6 +72,10 @@ namespace CustomView
                     b.Removed = true;
                     //bm.SetNumberOfBlocksRemoved(); isso deixa comentado
                     Score.score += 10;
+
+                    if (Score.score == 20)
+                        GameView.isSendingLetter = true;
+
                     break;
                 }
             }
