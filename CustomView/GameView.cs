@@ -115,8 +115,8 @@ namespace CustomView
             else if (isDead)
                 GameOver();
 
-            if (isSendingLetter)
-                SendLetterToHangman();
+            /*if (isSendingLetter)
+                SendLetterToHangman();*/
         }
 
         private void GameOver()
@@ -136,7 +136,7 @@ namespace CustomView
             isDead = false;
         }
 
-        private void SendLetterToHangman()
+        /*private void SendLetterToHangman()
         {
             isSendingLetter = false;
             Intent i = new Intent("Game");
@@ -149,7 +149,7 @@ namespace CustomView
 
             i.PutExtras(myParameters);
             context.StartActivity(i);
-        }
+        }*/
 
         public void Run()
         {
